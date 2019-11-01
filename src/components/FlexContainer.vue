@@ -46,7 +46,10 @@ export default {
 }
 
 .item {
-  padding: 20px;
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
   border: 1px solid #fff;
   background-color: #ddd;
   flex-shrink: 0;
