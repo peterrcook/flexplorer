@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <div id="flex-container" :style="containerStyle" >
-      <div v-for="item in storeState.items" :key="item.id" class="item" contenteditable>{{item.text}}</div>
+    <div id="flex-container" class="bg-light-gray" :style="containerStyle" >
+      <div v-for="item in storeState.items" :key="item.id" class="item bg-moon-gray" contenteditable>{{item.text}}</div>
     </div>
   </div>
 </template>
@@ -41,7 +41,6 @@ export default {
 }
 
 #flex-container {
-  background-color: #eee;
   overflow: hidden;
 }
 
@@ -51,7 +50,6 @@ export default {
   font-size: 1rem;
   padding: 1rem;
   border: 1px solid #fff;
-  background-color: #ddd;
   flex-shrink: 0;
 
   overflow: hidden;
