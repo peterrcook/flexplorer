@@ -17,7 +17,7 @@ var store = {
             },
             {
                 id: 2,
-                text: "Lorem ipsum more text more text"
+                text: "Lorem ipsum 3"
             },
             {
                 id: 3,
@@ -33,9 +33,10 @@ var store = {
         this.state[key] = value;
     },
     addItem() {
+        var newId = this.state.items.length;
         this.state.items.push({
-            id: this.state.items.length,
-            text: "Lorem ipsum"
+            id: newId,
+            text: "Lorem ipsum " + (newId + 1)
         });
     },
     removeItem() {
