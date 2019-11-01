@@ -1,13 +1,7 @@
 <template>
   <div class="wrapper">
     <div id="flex-container" :style="containerStyle" >
-      <div contenteditable class="item item-1">Lorem ipsum 1</div>
-      <div contenteditable class="item item-2">Lorem ipsum 2</div>
-      <div contenteditable class="item item-3">Lorem ipsum 3 more text more text more text</div>
-      <div contenteditable class="item item-4">Lorem ipsum 4</div>
-      <div contenteditable class="item">Lorem ipsum 5</div>
-      <div contenteditable class="item">Lorem ipsum 6</div>
-      <div contenteditable class="item">Lorem ipsum 7</div>
+      <textarea v-for="item in storeState.items" :key="item.id" v-model="item.text" class="item"></textarea>
     </div>
   </div>
 </template>
@@ -58,6 +52,8 @@ export default {
   border: 1px solid #fff;
   background-color: #ddd;
   flex-shrink: 0;
+
+  overflow: hidden;
 }
 
 /* .item-1 {
