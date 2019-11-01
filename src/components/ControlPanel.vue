@@ -12,8 +12,8 @@
     </div>
     <div>
       <h4>Items</h4>
-      <div class="button" @click="removeItem">Remove item</div>
-      <div class="button" @click="addItem">Add item</div>
+      <div class="button noselect" @click="removeItem">Remove item</div>
+      <div class="button noselect" @click="addItem">Add item</div>
     </div>
   </div>
 </template>
@@ -52,6 +52,8 @@ export default {
   top: 0;
   bottom: 0;
   width: 300px;
+  box-sizing: border-box;
+  padding: 1rem;
   border-right: 1px solid #ddd;
   overflow-y: auto;
 }

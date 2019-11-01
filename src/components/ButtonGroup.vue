@@ -3,7 +3,7 @@
     <h4>{{label}}</h4>
     <div v-for="item in items"
          :key="item"
-         :class="{item: true, button: true, active: item === storeState[groupId]}"
+         :class="{item: true, button: true, noselect: true, active: item === storeState[groupId]}"
          @click="setItem(groupId, item)">
       {{item}}
     </div>

@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style>
-body: {
+body {
   margin: 0;
 }
 
@@ -28,6 +28,13 @@ body: {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button {
