@@ -3,6 +3,8 @@
     <ButtonGroup :items="flexRules.flexDirection" groupId="flexDirection" label="flex-direction" />
     <ButtonGroup :items="flexRules.flexWrap" groupId="flexWrap" label="flex-wrap" />
     <ButtonGroup :items="flexRules.justifyContent" groupId="justifyContent" label="justify-content" />
+    <ButtonGroup :items="flexRules.alignItems" groupId="alignItems" label="align-items" />
+    <ButtonGroup :items="flexRules.alignContent" groupId="alignContent" label="align-content" />
   </div>
 </template>
 

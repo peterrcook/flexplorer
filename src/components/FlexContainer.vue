@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div id="flex-container" :style="containerStyle" >
-      <textarea v-for="item in storeState.items" :key="item.id" v-model="item.text" class="item"></textarea>
+      <div v-for="item in storeState.items" :key="item.id" class="item">{{item.text}}</div>
     </div>
   </div>
 </template>
@@ -22,7 +22,9 @@ export default {
         display: 'flex',
         flexDirection: store.state.flexDirection,
         flexWrap: store.state.flexWrap,
-        justifyContent: store.state.justifyContent
+        justifyContent: store.state.justifyContent,
+        alignItems: store.state.alignItems,
+        alignContent: store.state.alignContent
       }
     }
   }
@@ -35,9 +37,6 @@ export default {
 }
 
 #flex-container {
-  align-items: center; /* stretch, center, flex-start, flex-end, baseline - aligns items along cross-axis */
-  align-content: space-around; /* space-around, flex-start, flex-end, center, stretch, space-between - if multiline (due to wrapping) defines how lines are distributed along cross-axis */
-
   width: 100%;
   height: 50%;
   
@@ -56,17 +55,16 @@ export default {
   overflow: hidden;
 }
 
-/* .item-1 {
-   flex-shrink: 2;
-   } */
-.item-3 {
-  flex-shrink: 2;
+.item-1 {
+  /* flex-shrink: 2; */
 }
-
+.item-3 {
+  /* flex-shrink: 2; */
+}
 .item-4 {
   /*   flex-grow: 1; */
-  width: 200px;
-  height: 100px;
+  /* width: 200px;
+     height: 100px; */
   /*   flex-shrink: 0; */
 }
 

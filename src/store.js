@@ -3,6 +3,8 @@ var store = {
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'flex-start',
+        alignItems: 'normal',
+        alignContent: 'normal',
 
         items: [
             {
