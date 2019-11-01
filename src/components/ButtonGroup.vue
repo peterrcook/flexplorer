@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>{{label}}</h4>
+    <h2>{{label}}</h2>
     <div v-for="item in items"
          :key="item"
          :class="{item: true, button: true, noselect: true, active: item === storeState[groupId]}"

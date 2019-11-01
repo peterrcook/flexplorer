@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import 'normalize.css';
+
 import FlexContainer from './components/FlexContainer.vue'
 import ControlPanel from './components/ControlPanel.vue'
 

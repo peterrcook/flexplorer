@@ -6,12 +6,12 @@
     <ButtonGroup :items="flexRules.alignItems" groupId="alignItems" label="align-items" />
     <ButtonGroup :items="flexRules.alignContent" groupId="alignContent" label="align-content" />
     <div>
-      <h4>Flex container</h4>
+      <h2>Flex container</h2>
       <input type="checkbox" v-model="storeState.controlSizeOfContainer" />
       <label>Control size of container</label>
     </div>
     <div>
-      <h4>Items</h4>
+      <h2>Items</h2>
       <div class="button noselect" @click="removeItem">Remove item</div>
       <div class="button noselect" @click="addItem">Add item</div>
     </div>
@@ -48,6 +48,7 @@ export default {
 
 <style>
 .control-panel {
+  font-family: 'Inconsolata', monospace;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -56,5 +57,9 @@ export default {
   padding: 1rem;
   border-right: 1px solid #ddd;
   overflow-y: auto;
+}
+
+.control-panel h2 {
+  font-size: 1rem;
 }
 </style>
