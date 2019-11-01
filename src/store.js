@@ -6,6 +6,8 @@ var store = {
         alignItems: 'normal',
         alignContent: 'normal',
 
+        controlSizeOfContainer: true,
+
         items: [
             {
                 id: 0,

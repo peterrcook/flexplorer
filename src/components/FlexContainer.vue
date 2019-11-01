@@ -24,7 +24,11 @@ export default {
         flexWrap: store.state.flexWrap,
         justifyContent: store.state.justifyContent,
         alignItems: store.state.alignItems,
-        alignContent: store.state.alignContent
+        alignContent: store.state.alignContent,
+
+        resize: store.state.controlSizeOfContainer ? 'both' : 'none',
+        width: 'auto',
+        height: 'auto'
       }
     }
   }
@@ -37,13 +41,8 @@ export default {
 }
 
 #flex-container {
-  width: 100%;
-  height: 50%;
-  
   background-color: #eee;
   overflow: hidden;
-  
-  resize: both;
 }
 
 .item {

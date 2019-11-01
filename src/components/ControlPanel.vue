@@ -6,6 +6,11 @@
     <ButtonGroup :items="flexRules.alignItems" groupId="alignItems" label="align-items" />
     <ButtonGroup :items="flexRules.alignContent" groupId="alignContent" label="align-content" />
     <div>
+      <h4>Flex container</h4>
+      <input type="checkbox" v-model="storeState.controlSizeOfContainer" />
+      <label>Control size of container</label>
+    </div>
+    <div>
       <h4>Items</h4>
       <div class="button" @click="removeItem">Remove item</div>
       <div class="button" @click="addItem">Add item</div>
