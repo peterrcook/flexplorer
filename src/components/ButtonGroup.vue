@@ -1,8 +1,11 @@
 <template>
   <div>
     <h4>{{label}}</h4>
-    <div v-for="item in items" :key="item" class="item">
-      <div :class="{inner: true, active: item === storeState[groupId]}" @click="setItem(groupId, item)">{{item}}</div>
+    <div v-for="item in items"
+         :key="item"
+         :class="{item: true, button: true, active: item === storeState[groupId]}"
+         @click="setItem(groupId, item)">
+      {{item}}
     </div>
   </div>
 </template>
@@ -32,11 +35,6 @@ export default {
 
 <style scoped>
 .item {
-  display: inline-block;
-}
-.inner {
-  padding: 1em;
-  cursor: pointer;
 }  
 .active {
   background: yellow;

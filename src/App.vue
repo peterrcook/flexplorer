@@ -29,4 +29,13 @@ body: {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
+.button {
+  padding: 0.5em;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 0.25em;
+  cursor: pointer;
+  margin: 0 4px 4px 0;
+}
 </style>

@@ -5,6 +5,11 @@
     <ButtonGroup :items="flexRules.justifyContent" groupId="justifyContent" label="justify-content" />
     <ButtonGroup :items="flexRules.alignItems" groupId="alignItems" label="align-items" />
     <ButtonGroup :items="flexRules.alignContent" groupId="alignContent" label="align-content" />
+    <div>
+      <h4>Items</h4>
+      <div class="button" @click="removeItem">Remove item</div>
+      <div class="button" @click="addItem">Add item</div>
+    </div>
   </div>
 </template>
 
@@ -19,21 +24,30 @@ export default {
   components: {
     ButtonGroup
   },
-  data: function() {
+  data: () => {
     return {
       storeState: store.state,
       flexRules: flexRules
+    }
+  },
+  methods: {
+    addItem: () => {
+      store.addItem();
+    },
+    removeItem: () => {
+      store.removeItem();
     }
   }
 }
 </script>
 
-<style scoped>
+<style>
 .control-panel {
   position: fixed;
   top: 0;
   bottom: 0;
   width: 300px;
   border-right: 1px solid #ddd;
+  overflow-y: auto;
 }
 </style>

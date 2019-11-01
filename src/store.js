@@ -31,6 +31,15 @@ var store = {
     },
     setItem(key, value) {
         this.state[key] = value;
+    },
+    addItem() {
+        this.state.items.push({
+            id: this.state.items.length,
+            text: "Lorem ipsum"
+        });
+    },
+    removeItem() {
+        this.state.items.pop();
     }
 }
 
