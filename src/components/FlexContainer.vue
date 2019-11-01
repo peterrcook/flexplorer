@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  margin-left: 300px;
+  margin-left: 20rem;
 }
 
 #flex-container {

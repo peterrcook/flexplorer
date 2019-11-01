@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import 'normalize.css';
+import 'tachyons';
 
 import FlexContainer from './components/FlexContainer.vue'
 import ControlPanel from './components/ControlPanel.vue'
@@ -39,12 +39,4 @@ body {
   user-select: none;
 }
 
-.button {
-  padding: 0.5em;
-  display: inline-block;
-  background-color: #eee;
-  border-radius: 0.25em;
-  cursor: pointer;
-  margin: 0 4px 4px 0;
-}
 </style>

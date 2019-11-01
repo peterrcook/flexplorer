@@ -1,19 +1,22 @@
 <template>
-  <div class="control-panel">
+  <div class="control-panel pa3">
+    <h1 class="title f3 mt0 bb b--silver mb4">Flexplorer</h1>
+    <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex container</h2>
     <ButtonGroup :items="flexRules.flexDirection" groupId="flexDirection" label="flex-direction" />
     <ButtonGroup :items="flexRules.flexWrap" groupId="flexWrap" label="flex-wrap" />
     <ButtonGroup :items="flexRules.justifyContent" groupId="justifyContent" label="justify-content" />
     <ButtonGroup :items="flexRules.alignItems" groupId="alignItems" label="align-items" />
     <ButtonGroup :items="flexRules.alignContent" groupId="alignContent" label="align-content" />
     <div>
-      <h2>Flex container</h2>
-      <input type="checkbox" v-model="storeState.controlSizeOfContainer" />
-      <label>Control size of container</label>
+      <div class="flex items-center">
+        <input class="mr2" type="checkbox" v-model="storeState.controlSizeOfContainer" />
+        <label>Control size of container</label>
+      </div>
     </div>
-    <div>
-      <h2>Items</h2>
-      <div class="button noselect" @click="removeItem">Remove item</div>
-      <div class="button noselect" @click="addItem">Add item</div>
+    <div class="mt4">
+      <h2 class="f6 pb1 bb b--moon-gray moon-gray">Items</h2>
+      <div class="f6 link dim br2 ba ph3 pv2 mb2 dib near-black noselect" @click="removeItem">Remove item</div>
+      <div class="f6 link dim br2 ba ph3 pv2 mb2 ml2 dib near-black noselect" @click="addItem">Add item</div>
     </div>
   </div>
 </template>
@@ -48,18 +51,17 @@ export default {
 
 <style>
 .control-panel {
-  font-family: 'Inconsolata', monospace;
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 300px;
+  width: 20rem;
   box-sizing: border-box;
-  padding: 1rem;
+  /* padding: 1rem; */
   border-right: 1px solid #ddd;
   overflow-y: auto;
 }
 
-.control-panel h2 {
-  font-size: 1rem;
+.control-panel .title {
+  font-family: 'Inconsolata', monospace;
 }
 </style>

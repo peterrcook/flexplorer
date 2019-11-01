@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h2>{{label}}</h2>
+  <div class="item-group mb4">
+    <h2 class="mb2 f5">{{label}}:</h2>
     <div v-for="item in items"
          :key="item"
-         :class="{item: true, button: true, noselect: true, active: item === storeState[groupId]}"
+         :class="{item: true, pa1: true, noselect: true, dim: true, 'bg-yellow': item === storeState[groupId]}"
          @click="setItem(groupId, item)">
       {{item}}
     </div>
@@ -34,9 +34,7 @@ export default {
 </script>
 
 <style scoped>
-.item {
-}  
-.active {
-  background: yellow;
+.item-group {
+  font-family: 'Inconsolata', monospace;
 }
 </style>
