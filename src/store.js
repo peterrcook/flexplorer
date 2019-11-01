@@ -1,7 +1,7 @@
 var store = {
     state: {
         flexDirection: 'row',
-        flexWrap: 'wrap',
+        flexWrap: 'nowrap',
         justifyContent: 'flex-start',
         alignItems: 'normal',
         alignContent: 'normal',

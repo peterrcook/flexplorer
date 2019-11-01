@@ -1,6 +1,6 @@
 export default {
     flexDirection: ['row', 'column'],
-    flexWrap: ['wrap', 'nowrap'],
+    flexWrap: ['nowrap', 'wrap'],
     justifyContent: ['flex-start', 'flex-end', 'center', 'space-around', 'space-between', 'space-evenly'],
 
     /* align items along cross-axis */
