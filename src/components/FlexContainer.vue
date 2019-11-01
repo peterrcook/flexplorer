@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div id="flex-container" :style="containerStyle" >
-      <div v-for="item in storeState.items" :key="item.id" class="item">{{item.text}}</div>
+      <div v-for="item in storeState.items" :key="item.id" class="item" contenteditable>{{item.text}}</div>
     </div>
   </div>
 </template>
