@@ -11,23 +11,23 @@ var store = {
         items: [
             {
                 id: 0,
-                text: "Lorem ipsum 1"
+                text: "Item 1"
             },
             {
                 id: 1,
-                text: "Lorem ipsum 2"
+                text: "Item 2"
             },
             {
                 id: 2,
-                text: "Lorem ipsum 3"
+                text: "Item 3"
             },
             {
                 id: 3,
-                text: "Lorem ipsum 4"
+                text: "Item 4"
             },
             {
                 id: 4,
-                text: "Lorem ipsum 5"
+                text: "Item 5"
             }
         ]
     },
@@ -38,7 +38,7 @@ var store = {
         var newId = this.state.items.length;
         this.state.items.push({
             id: newId,
-            text: "Lorem ipsum " + (newId + 1)
+            text: "Item " + (newId + 1)
         });
     },
     removeItem() {
