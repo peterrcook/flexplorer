@@ -27,8 +27,8 @@ export default {
         alignContent: store.state.alignContent,
 
         resize: store.state.controlSizeOfContainer ? 'both' : 'none',
-        width: 'auto',
-        height: 'auto'
+        width: store.state.controlSizeOfContainer ? 'auto' : null,
+        height: store.state.controlSizeOfContainer ? 'auto' : null
       }
     }
   }
