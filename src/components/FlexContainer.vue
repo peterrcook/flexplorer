@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div id="flex-container" class="bg-light-gray" :style="containerStyle" >
-      <div v-for="item in storeState.items" :key="item.id" class="item bg-moon-gray" contenteditable>{{item.text}}</div>
+      <div v-for="(item, i) in storeState.items" :key="item.id" class="item bg-moon-gray" :style="itemStyle(item)" contenteditable @click="selectItem(i)">{{item.text}}</div>
     </div>
   </div>
 </template>
@@ -11,13 +11,13 @@ import store from '../store';
 
 export default {
   name: 'FlexContainer',
-  data: function() {
+  data: () => {
     return {
       storeState: store.state
     }
   },
   computed: {
-    containerStyle: function() {
+    containerStyle: () => {
       return {
         display: 'flex',
         flexDirection: store.state.flexDirection,
@@ -29,6 +29,17 @@ export default {
         resize: store.state.controlSizeOfContainer ? 'both' : 'none',
         width: store.state.controlSizeOfContainer ? 'auto' : null,
         height: store.state.controlSizeOfContainer ? 'auto' : null
+      }
+    }
+  },
+  methods: {
+    selectItem: function(i) {
+      console.log(i);
+      store.selectItem(i);
+    },
+    itemStyle: item => {
+      return {
+        flexGrow: item.flexGrow
       }
     }
   }
