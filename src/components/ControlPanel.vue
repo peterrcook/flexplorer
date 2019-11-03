@@ -24,9 +24,9 @@
       <div class="flex justify-end">
         <i class="deselect-item material-icons dim " @click="deselectItem">close</i>
       </div>
-      <div>{{ storeState.selectedItem }}</div>
-      <label>flex-grow</label>
-      <input :value="storeState.items[storeState.selectedItem].flexGrow" @change="setItemValue('flexGrow', $event)">
+      <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex item</h2>
+      <TextInput label="flex-shrink" cssProp="flexShrink" />
+      <TextInput label="flex-grow" cssProp="flexGrow" />
     </div>
   </div>
 </template>
@@ -36,11 +36,13 @@ import store from '../store';
 import flexRules from '../flex-rules';
 
 import ButtonGroup from './ButtonGroup.vue';
+import TextInput from './TextInput.vue';
 
 export default {
   name: 'ControlPanel',
   components: {
-    ButtonGroup
+    ButtonGroup,
+    TextInput
   },
   data: () => {
     return {
@@ -57,10 +59,6 @@ export default {
     },
     deselectItem: () => {
       store.selectItem(null);
-    },
-    setItemValue: (id, e) => {
-      console.log(id, e);
-      store.setSelectedItemValue(id, +e.target.value);
     }
   }
 }

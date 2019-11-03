@@ -14,26 +14,31 @@ var store = {
             {
                 id: 0,
                 text: "Item 1",
+                flexShrink: 0,
                 flexGrow: 0
             },
             {
                 id: 1,
                 text: "Item 2",
+                flexShrink: 0,
                 flexGrow: 0
             },
             {
                 id: 2,
                 text: "Item 3",
+                flexShrink: 0,
                 flexGrow: 0
             },
             {
                 id: 3,
                 text: "Item 4",
+                flexShrink: 0,
                 flexGrow: 0
             },
             {
                 id: 4,
                 text: "Item 5",
+                flexShrink: 0,
                 flexGrow: 0
             }
         ]
@@ -46,6 +51,7 @@ var store = {
         this.state.items.push({
             id: newId,
             text: "Item " + (newId + 1),
+            flexShrink: 0,
             flexGrow: 0
         });
     },

@@ -39,6 +39,7 @@ export default {
     },
     itemStyle: item => {
       return {
+        flexShrink: item.flexShrink,
         flexGrow: item.flexGrow
       }
     }
