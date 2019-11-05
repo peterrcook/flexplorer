@@ -17,7 +17,8 @@ var store = {
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
-                flexBasis: 'auto'
+                flexBasis: 'auto',
+                alignSelf: 'auto'
             },
             {
                 id: 1,
@@ -25,7 +26,8 @@ var store = {
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
-                flexBasis: 'auto'
+                flexBasis: 'auto',
+                alignSelf: 'auto'
             },
             {
                 id: 2,
@@ -33,7 +35,8 @@ var store = {
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
-                flexBasis: 'auto'
+                flexBasis: 'auto',
+                alignSelf: 'auto'
             },
             {
                 id: 3,
@@ -41,7 +44,8 @@ var store = {
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
-                flexBasis: 'auto'
+                flexBasis: 'auto',
+                alignSelf: 'auto'
             },
             {
                 id: 4,
@@ -49,7 +53,8 @@ var store = {
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
-                flexBasis: 'auto'
+                flexBasis: 'auto',
+                alignSelf: 'auto'
             }
         ]
     },
@@ -64,7 +69,8 @@ var store = {
             order: 0,
             flexShrink: 1,
             flexGrow: 0,
-            flexBasis: 'auto'
+            flexBasis: 'auto',
+            alignSelf: 'auto'
         });
     },
     removeItem() {

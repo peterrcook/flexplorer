@@ -29,6 +29,7 @@
       <TextInput label="flex-basis" cssProp="flexBasis" />
       <TextInput label="flex-shrink" cssProp="flexShrink" />
       <TextInput label="flex-grow" cssProp="flexGrow" />
+      <ButtonGroup :items="flexRules.alignSelf" id="alignSelf" label="align-self" :handleClick="handleItemPropertyClick" :selectedValue="storeState.items[storeState.selectedItem].alignSelf" />
     </div>
   </div>
 </template>
@@ -65,6 +66,9 @@ export default {
     handleContainerPropertyClick: (id, value) => {
       console.log('handling click', id, value);
       store.setItem(id, value);
+    },
+    handleItemPropertyClick: (id, value) => {
+      store.setSelectedItemValue(id, value);
     }
   }
 }

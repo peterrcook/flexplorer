@@ -41,7 +41,8 @@ export default {
         order: item.order,
         flexShrink: item.flexShrink,
         flexGrow: item.flexGrow,
-        flexBasis: item.flexBasis
+        flexBasis: item.flexBasis,
+        alignSelf: item.alignSelf
       }
     }
   }
