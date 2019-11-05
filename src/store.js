@@ -15,31 +15,36 @@ var store = {
                 id: 0,
                 text: "Item 1",
                 flexShrink: 0,
-                flexGrow: 0
+                flexGrow: 0,
+                order: null
             },
             {
                 id: 1,
                 text: "Item 2",
                 flexShrink: 0,
-                flexGrow: 0
+                flexGrow: 0,
+                order: null
             },
             {
                 id: 2,
                 text: "Item 3",
                 flexShrink: 0,
-                flexGrow: 0
+                flexGrow: 0,
+                order: null
             },
             {
                 id: 3,
                 text: "Item 4",
                 flexShrink: 0,
-                flexGrow: 0
+                flexGrow: 0,
+                order: null
             },
             {
                 id: 4,
                 text: "Item 5",
                 flexShrink: 0,
-                flexGrow: 0
+                flexGrow: 0,
+                order: null
             }
         ]
     },
@@ -52,7 +57,8 @@ var store = {
             id: newId,
             text: "Item " + (newId + 1),
             flexShrink: 0,
-            flexGrow: 0
+            flexGrow: 0,
+            order: null
         });
     },
     removeItem() {

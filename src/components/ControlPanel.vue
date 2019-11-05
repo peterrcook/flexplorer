@@ -25,6 +25,7 @@
         <i class="deselect-item material-icons dim " @click="deselectItem">close</i>
       </div>
       <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex item</h2>
+      <TextInput label="order" cssProp="order" />
       <TextInput label="flex-shrink" cssProp="flexShrink" />
       <TextInput label="flex-grow" cssProp="flexGrow" />
     </div>
