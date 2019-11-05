@@ -14,37 +14,42 @@ var store = {
             {
                 id: 0,
                 text: "Item 1",
-                flexShrink: 0,
+                order: 0,
+                flexShrink: 1,
                 flexGrow: 0,
-                order: null
+                flexBasis: 'auto'
             },
             {
                 id: 1,
                 text: "Item 2",
-                flexShrink: 0,
+                order: 0,
+                flexShrink: 1,
                 flexGrow: 0,
-                order: null
+                flexBasis: 'auto'
             },
             {
                 id: 2,
                 text: "Item 3",
-                flexShrink: 0,
+                order: 0,
+                flexShrink: 1,
                 flexGrow: 0,
-                order: null
+                flexBasis: 'auto'
             },
             {
                 id: 3,
                 text: "Item 4",
-                flexShrink: 0,
+                order: 0,
+                flexShrink: 1,
                 flexGrow: 0,
-                order: null
+                flexBasis: 'auto'
             },
             {
                 id: 4,
                 text: "Item 5",
-                flexShrink: 0,
+                order: 0,
+                flexShrink: 1,
                 flexGrow: 0,
-                order: null
+                flexBasis: 'auto'
             }
         ]
     },
@@ -56,9 +61,10 @@ var store = {
         this.state.items.push({
             id: newId,
             text: "Item " + (newId + 1),
-            flexShrink: 0,
+            order: 0,
+            flexShrink: 1,
             flexGrow: 0,
-            order: null
+            flexBasis: 'auto'
         });
     },
     removeItem() {
@@ -68,7 +74,7 @@ var store = {
         this.state.selectedItem = i;
     },
     setSelectedItemValue(id, value) {
-        console.log('setting', id, 'of item', this.state.selectedItem, 'to', value);
+        // console.log('setting', id, 'of item', this.state.selectedItem, 'to', value);
         this.state.items[this.state.selectedItem][id] = value;
     }
 }

@@ -26,6 +26,7 @@
       </div>
       <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex item</h2>
       <TextInput label="order" cssProp="order" />
+      <TextInput label="flex-basis" cssProp="flexBasis" />
       <TextInput label="flex-shrink" cssProp="flexShrink" />
       <TextInput label="flex-grow" cssProp="flexGrow" />
     </div>

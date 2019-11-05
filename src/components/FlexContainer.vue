@@ -34,14 +34,14 @@ export default {
   },
   methods: {
     selectItem: function(i) {
-      console.log(i);
       store.selectItem(i);
     },
     itemStyle: item => {
       return {
         order: item.order,
         flexShrink: item.flexShrink,
-        flexGrow: item.flexGrow
+        flexGrow: item.flexGrow,
+        flexBasis: item.flexBasis
       }
     }
   }

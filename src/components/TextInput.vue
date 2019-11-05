@@ -21,8 +21,7 @@ export default {
   },
   methods: {
     setItemValue: (id, e) => {
-      console.log(id, e);
-      store.setSelectedItemValue(id, +e.target.value);
+      store.setSelectedItemValue(id, e.target.value);
     }
   }
 }
