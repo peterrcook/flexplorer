@@ -3,32 +3,22 @@
     <h2 class="mb1 f5">{{label}}:</h2>
     <div v-for="item in items"
          :key="item"
-         :class="{item: true, pa1: true, noselect: true, dim: true, 'bg-yellow': item === storeState[groupId]}"
-         @click="setItem(groupId, item)">
+         :class="{item: true, pa1: true, noselect: true, dim: true, 'bg-yellow': item === selectedValue}"
+         @click="handleClick(id, item)">
       {{item}}
     </div>
   </div>
 </template>
 
 <script>
-import store from '../store';
-
 export default {
   name: 'ButtonGroup',
   props: {
     items: Array,
-    groupId: String,
-    label: String
-  },
-  data: function() {
-    return {
-      storeState: store.state
-    }
-  },
-  methods: {
-    setItem: function(id, item) {
-      store.setItem(id, item);
-    }
+    id: String,
+    label: String,
+    handleClick: Function,
+    selectedValue: String
   }
 }
 </script>

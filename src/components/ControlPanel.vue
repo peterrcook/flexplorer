@@ -3,11 +3,11 @@
     <h1 class="title f3 mt0 bb b--silver mb4">Flexplorer</h1>
     <div class="flex-container-panel" v-if="storeState.selectedItem === null">
       <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex container</h2>
-      <ButtonGroup :items="flexRules.flexDirection" groupId="flexDirection" label="flex-direction" />
-      <ButtonGroup :items="flexRules.flexWrap" groupId="flexWrap" label="flex-wrap" />
-      <ButtonGroup :items="flexRules.justifyContent" groupId="justifyContent" label="justify-content" />
-      <ButtonGroup :items="flexRules.alignItems" groupId="alignItems" label="align-items" />
-      <ButtonGroup :items="flexRules.alignContent" groupId="alignContent" label="align-content" />
+      <ButtonGroup :items="flexRules.flexDirection" id="flexDirection" label="flex-direction" :handleClick="handleContainerPropertyClick" :selectedValue="storeState.flexDirection" />
+      <ButtonGroup :items="flexRules.flexWrap" id="flexWrap" label="flex-wrap" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.flexWrap" />
+      <ButtonGroup :items="flexRules.justifyContent" id="justifyContent" label="justify-content" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.justifyContent" />
+      <ButtonGroup :items="flexRules.alignItems" id="alignItems" label="align-items" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignItems" />
+      <ButtonGroup :items="flexRules.alignContent" id="alignContent" label="align-content" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignContent" />
       <div>
         <div class="flex items-center">
           <input class="mr2" type="checkbox" v-model="storeState.controlSizeOfContainer" />
@@ -61,6 +61,10 @@ export default {
     },
     deselectItem: () => {
       store.selectItem(null);
+    },
+    handleContainerPropertyClick: (id, value) => {
+      console.log('handling click', id, value);
+      store.setItem(id, value);
     }
   }
 }
@@ -73,7 +77,6 @@ export default {
   bottom: 0;
   width: 20rem;
   box-sizing: border-box;
-  /* padding: 1rem; */
   border-right: 1px solid #ddd;
   overflow-y: auto;
 }
