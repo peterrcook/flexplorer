@@ -7,6 +7,7 @@
 
 <script>
 import 'tachyons';
+import './tachyons-additions.css';
 
 import FlexContainer from './components/FlexContainer.vue'
 import ControlPanel from './components/ControlPanel.vue'

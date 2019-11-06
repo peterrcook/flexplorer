@@ -1,5 +1,5 @@
 <template>
-  <div class="control-panel pa3">
+  <div class="control-panel pa3 vh-50 w-100 fixed-ns vh-100-ns w5-m w6-l overflow-y-auto">
     <h1 class="title f3 mt0 bb b--silver mb4">Flexplorer</h1>
     <div class="flex-container-panel" v-if="storeState.selectedItem === null">
       <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex container</h2>
@@ -75,13 +75,7 @@ export default {
 
 <style>
 .control-panel {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 20rem;
-  box-sizing: border-box;
-  border-right: 1px solid #ddd;
-  overflow-y: auto;
+  border-bottom: 1px solid rgba( 0, 0, 0, .1 );
 }
 
 .control-panel .title {
@@ -91,4 +85,12 @@ export default {
 .deselect-item {
   cursor: default;
 }
+
+@media screen and (min-width: 30em) {
+  .control-panel {
+    border-bottom: none;
+    border-right: 1px solid rgba( 0, 0, 0, .1 );
+  }
+}
+
 </style>
