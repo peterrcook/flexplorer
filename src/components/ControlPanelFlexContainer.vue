@@ -8,11 +8,9 @@
     <ButtonGroup :items="flexRules.alignItems" id="alignItems" label="align-items" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignItems" />
     <ButtonGroup :items="flexRules.alignContent" id="alignContent" label="align-content" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignContent" />
 
-    <div>
-      <div class="flex items-center">
-        <input class="mr2" type="checkbox" v-model="storeState.controlSizeOfContainer" />
-        <label>Control size of container</label>
-      </div>
+    <div class="flex items-center">
+      <input class="mr2" type="checkbox" v-model="storeState.controlSizeOfContainer" />
+      <label>Control size of container</label>
     </div>
 
     <div class="mt4">

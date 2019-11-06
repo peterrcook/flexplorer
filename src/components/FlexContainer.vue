@@ -2,6 +2,7 @@
   <div class="wrapper vh-50 overflow-y-auto vh-100-m vh-100-l pl7-m pl8-l">
     <div id="flex-container" class="bg-light-gray" :style="containerStyle" >
       <div v-for="(item, i) in storeState.items" :key="item.id" class="item bg-moon-gray" :style="itemStyle(item)" contenteditable @click="selectItem(i)">{{item.text}}</div>
+      <DragHandle :size="18" />
     </div>
   </div>
 </template>
@@ -9,8 +10,13 @@
 <script>
 import store from '../store';
 
+import DragHandle from './DragHandle';
+
 export default {
   name: 'FlexContainer',
+  components: {
+    DragHandle
+  },
   data: () => {
     return {
       storeState: store.state
@@ -52,6 +58,7 @@ export default {
 <style scoped>
 #flex-container {
   overflow: hidden;
+  position: relative;
 }
 
 .item {
