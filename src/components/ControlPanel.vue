@@ -64,7 +64,6 @@ export default {
       store.selectItem(null);
     },
     handleContainerPropertyClick: (id, value) => {
-      console.log('handling click', id, value);
       store.setItem(id, value);
     },
     handleItemPropertyClick: (id, value) => {
