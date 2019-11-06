@@ -1,6 +1,6 @@
 <template>
   <div class="item-group mb4">
-    <h2 class="mb1 f5">{{label}}:</h2>
+    <h2 class="mb2 f5">{{label}}:</h2>
     <div v-for="item in items"
          :key="item"
          :class="{item: true, pa1: true, noselect: true, dim: true, 'bg-yellow': item === selectedValue}"
