@@ -24,7 +24,7 @@
       <div class="flex justify-end">
         <i class="deselect-item material-icons dim " @click="deselectItem">close</i>
       </div>
-      <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex item</h2>
+      <h2 class="f6 pb1 mt0 bb b--moon-gray moon-gray">Flex item</h2>
       <TextInput label="order" cssProp="order" />
       <TextInput label="flex-basis" cssProp="flexBasis" />
       <TextInput label="flex-shrink" cssProp="flexShrink" />
