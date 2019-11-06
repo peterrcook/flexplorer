@@ -1,7 +1,7 @@
 export default {
     /* FLEX CONTAINER */
-    flexDirection: ['row', 'column'],
-    flexWrap: ['nowrap', 'wrap'],
+    flexDirection: ['row', 'row-reverse', 'column', 'column-reverse'],
+    flexWrap: ['nowrap', 'wrap', 'wrap-reverse'],
     justifyContent: ['flex-start', 'flex-end', 'center', 'space-around', 'space-between', 'space-evenly'],
 
     /* align items along cross-axis */
