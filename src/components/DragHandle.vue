@@ -21,13 +21,20 @@ export default {
 <style>
 .drag-handle {
   position: absolute;
+  display: none;
   right: 0;
   bottom: 0;
   pointer-events: none;
 }
 
 .drag-handle path {
-  fill: #ffd700;
   fill: #aaa;
+}
+
+@media screen and (min-width: 60em) {
+  /* only show drag-handle on larger displays - it tends to be fiddly and frustrating on mobile */
+  .drag-handle {
+    display: inline;
+  }
 }
 </style>
