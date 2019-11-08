@@ -2,7 +2,7 @@
   <div class="wrapper vh-50 overflow-y-auto vh-100-m vh-100-l pl7-m pl8-l">
     <div id="flex-container" class="bg-light-gray" :style="containerStyle" >
       <div v-for="(item, i) in storeState.items" :key="item.id" :class="itemClass(item)" :style="itemStyle(item)" contenteditable @click="selectItem(i)">{{item.text}}</div>
-      <DragHandle :size="18" />
+      <DragHandle :size="18" v-if="includeDragHandle()" />
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     selectItem: function(i) {
-      store.selectItem(i);
+      store.selectItem(i)
     },
     itemStyle: item => {
       return {
@@ -58,6 +58,10 @@ export default {
         "bg-yellow": item.id === store.state.selectedItem
       }
     },
+    includeDragHandle: () => {
+      // Only include custom drag handle in browsers that support resize css property
+      return 'resize' in document.body.style
+    }
   }
 }
 </script>

@@ -9,6 +9,7 @@ var store = {
 
         controlSizeOfContainer: true,
         selectedItem: null,
+        showInfo: false,
 
         items: [
             {
