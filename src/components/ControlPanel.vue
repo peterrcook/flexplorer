@@ -50,4 +50,8 @@ export default {
 .deselect-item {
   cursor: default;
 }
+
+.property-help {
+  font-family: 'Lato', 'Avenir', Helvetica, Arial, sans-serif;
+}
 </style>

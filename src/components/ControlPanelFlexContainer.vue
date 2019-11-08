@@ -2,10 +2,10 @@
   <div class="flex-container-control-panel">
     <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex container</h2>
 
-    <ButtonGroup :items="flexRules.flexDirection" id="flexDirection" label="flex-direction" :handleClick="handleContainerPropertyClick" :selectedValue="storeState.flexDirection" />
-    <ButtonGroup :items="flexRules.flexWrap" id="flexWrap" label="flex-wrap" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.flexWrap" />
-    <ButtonGroup :items="flexRules.justifyContent" id="justifyContent" label="justify-content" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.justifyContent" />
-    <ButtonGroup :items="flexRules.alignItems" id="alignItems" label="align-items" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignItems" />
+    <ButtonGroup :items="flexRules.flexDirection" id="flexDirection" label="flex-direction" :handleClick="handleContainerPropertyClick" :selectedValue="storeState.flexDirection" :helpText="helpText.flexDirection" />
+    <ButtonGroup :items="flexRules.flexWrap" id="flexWrap" label="flex-wrap" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.flexWrap" :helpText="helpText.flexWrap" />
+    <ButtonGroup :items="flexRules.justifyContent" id="justifyContent" label="justify-content" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.justifyContent" :helpText="helpText.justifyContent" />
+    <ButtonGroup :items="flexRules.alignItems" id="alignItems" label="align-items" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignItems" :helpText="helpText.alignItems" />
     <ButtonGroup :items="flexRules.alignContent" id="alignContent" label="align-content" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignContent" />
 
     <div class="flex items-center">
@@ -25,6 +25,7 @@
 <script>
 import store from '../store';
 import flexRules from '../flex-rules';
+import helpText from '../help-text';
 
 import ButtonGroup from './ButtonGroup.vue';
 
@@ -36,7 +37,8 @@ export default {
   data: () => {
     return {
       storeState: store.state,
-      flexRules: flexRules
+      flexRules: flexRules,
+      helpText: helpText
     }
   },
   methods: {
