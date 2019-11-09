@@ -4,8 +4,8 @@ var store = {
         flexDirection: 'row',
         flexWrap: 'nowrap',
         justifyContent: 'flex-start',
-        alignItems: 'normal',
-        alignContent: 'normal',
+        alignItems: 'stretch',
+        alignContent: 'stretch',
 
         controlSizeOfContainer: true,
         selectedItem: null,

@@ -2,11 +2,15 @@
   <div class="flex-container-control-panel">
     <h2 class="f6 pb1 bb b--moon-gray moon-gray">Flex container</h2>
 
-    <ButtonGroup :items="flexRules.flexDirection" id="flexDirection" label="flex-direction" :handleClick="handleContainerPropertyClick" :selectedValue="storeState.flexDirection" :helpText="helpText.flexDirection" />
-    <ButtonGroup :items="flexRules.flexWrap" id="flexWrap" label="flex-wrap" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.flexWrap" :helpText="helpText.flexWrap" />
-    <ButtonGroup :items="flexRules.justifyContent" id="justifyContent" label="justify-content" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.justifyContent" :helpText="helpText.justifyContent" />
-    <ButtonGroup :items="flexRules.alignItems" id="alignItems" label="align-items" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignItems" :helpText="helpText.alignItems" />
-    <ButtonGroup :items="flexRules.alignContent" id="alignContent" label="align-content" :handleClick="handleContainerPropertyClick"  :selectedValue="storeState.alignContent" :helpText="helpText.alignContent" />
+    <ButtonGroup
+      v-for="prop in flexRules.container"
+      :key="prop.id"
+      :items="prop.values"
+      :id="prop.id"
+      :label="prop.label"
+      :handleClick="handleContainerPropertyClick"
+      :selectedValue="storeState[prop.id]"
+      :helpText="helpText[prop.id]" />
 
     <div class="flex items-center">
       <input class="mr1" type="checkbox" v-model="storeState.controlSizeOfContainer" />
@@ -54,4 +58,3 @@ export default {
   }
 }
 </script>
-
