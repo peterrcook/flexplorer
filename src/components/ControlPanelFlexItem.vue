@@ -13,13 +13,15 @@
       id="alignSelf"
       label="align-self"
       :handleClick="handleItemPropertyClick"
-      :selectedValue="storeState.items[storeState.selectedItem].alignSelf" />
+      :selectedValue="storeState.items[storeState.selectedItem].alignSelf"
+      :helpText="helpText.alignSelf" />
   </div>
 </template>
 
 <script>
 import store from '../store';
 import flexRules from '../flex-rules';
+import helpText from '../help-text';
 
 import ButtonGroup from './ButtonGroup.vue';
 import TextInput from './TextInput.vue';
@@ -33,7 +35,8 @@ export default {
   data: () => {
     return {
       storeState: store.state,
-      flexRules: flexRules
+      flexRules: flexRules,
+      helpText: helpText
     }
   },
   methods: {
