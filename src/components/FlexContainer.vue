@@ -59,8 +59,12 @@ export default {
       }
     },
     includeDragHandle: () => {
+      // For now, don't use custom drag handle as I still need to figure out the logic behind
+      // when it's appropriate to show it
+      return false
+
       // Only include custom drag handle in browsers that support resize css property
-      return 'resize' in document.body.style
+      // return 'resize' in document.body.style
     }
   }
 }
