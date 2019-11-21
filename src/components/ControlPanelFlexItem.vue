@@ -9,7 +9,7 @@
     <TextInput label="flex-shrink" cssProp="flexShrink" />
     <TextInput label="flex-grow" cssProp="flexGrow" />
     <ButtonGroup
-      :items="flexRules.alignSelf"
+      :items="flexRules.items.alignSelf.values"
       id="alignSelf"
       label="align-self"
       :handleClick="handleItemPropertyClick"
