@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper vh-50 overflow-y-auto vh-100-m vh-100-l pl7-m pl8-l">
+    <div class="label f6 black-20 b">Flex container</div>
     <div id="flex-container" class="bg-light-gray ml4 mt4 mr4 shadow-1" :style="containerStyle" >
       <div v-for="(item, i) in storeState.items" :key="item.id" :class="itemClass(item)" :style="itemStyle(item)" spellcheck="false" contenteditable @click="selectItem(i)">{{item.text}}</div>
       <DragHandle :size="18" v-if="includeDragHandle()" />
@@ -86,5 +87,11 @@ export default {
   border: 1px solid #eee;
   flex-shrink: 0;
   overflow: hidden;
+}
+
+.wrapper .label {
+  position: absolute;
+  margin-top: 0.75rem;
+  margin-left: 2rem;
 }
 </style>
