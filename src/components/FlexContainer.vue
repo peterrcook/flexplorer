@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper vh-50 overflow-y-auto vh-100-m vh-100-l pl7-m pl8-l">
-    <div id="flex-container" class="bg-light-gray" :style="containerStyle" >
+    <div id="flex-container" class="bg-light-gray ml4 mt4 mr4 shadow-1" :style="containerStyle" >
       <div v-for="(item, i) in storeState.items" :key="item.id" :class="itemClass(item)" :style="itemStyle(item)" spellcheck="false" contenteditable @click="selectItem(i)">{{item.text}}</div>
       <DragHandle :size="18" v-if="includeDragHandle()" />
     </div>
@@ -54,7 +54,7 @@ export default {
     itemClass: (item) => {
       return {
         item: true,
-        "bg-black-40": item.id !== store.state.selectedItem,
+        "bg-black-50": item.id !== store.state.selectedItem,
         "white": item.id !== store.state.selectedItem,
         "bg-yellow": item.id === store.state.selectedItem,
         "black": item.id === store.state.selectedItem
@@ -83,7 +83,7 @@ export default {
   font-weight: 600;
   font-size: 1rem;
   padding: 1rem;
-  border: 1px solid #fff;
+  border: 1px solid #eee;
   flex-shrink: 0;
   overflow: hidden;
 }
