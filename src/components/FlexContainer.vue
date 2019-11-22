@@ -54,8 +54,10 @@ export default {
     itemClass: (item) => {
       return {
         item: true,
-        "bg-moon-gray": item.id !== store.state.selectedItem,
-        "bg-yellow": item.id === store.state.selectedItem
+        "bg-black-40": item.id !== store.state.selectedItem,
+        "white": item.id !== store.state.selectedItem,
+        "bg-yellow": item.id === store.state.selectedItem,
+        "black": item.id === store.state.selectedItem
       }
     },
     includeDragHandle: () => {
