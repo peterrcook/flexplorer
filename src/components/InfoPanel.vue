@@ -14,6 +14,6 @@
     <h4>Help on flexbox</h4>
     <p>If none of this makes any sense to you I recommend reading CSS Trick's <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="link dim silver">tutorial</a>, MDN's <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" class="link dim silver">guide</a> or if you're feeling brave the <a href="https://www.w3.org/TR/css-flexbox-1/" class="link dim silver">W3C spec</a>. Hopefully once you've understood the basics this explorer will deepen your understanding.</p>
     <h4>About</h4>
-    <p>Flexplorer was built for fun by <a href="https://petercook.dev" class="link dim silver">Peter Cook</a>. It's <a href="https://github.com/petercdev/flexplorer" class="link dim silver">open source</a> and contributions and comments are welcome.</p>
+    <p>Flexplorer was built for fun by <a href="https://peterrcook.com" class="link dim silver">Peter Cook</a>. It's <a href="https://github.com/peterrcook/flexplorer" class="link dim silver">open source</a> and contributions and comments are welcome.</p>
   </div>
 </template>
