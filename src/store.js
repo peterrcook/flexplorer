@@ -14,7 +14,7 @@ var store = {
         items: [
             {
                 id: 0,
-                text: "Item 1",
+                text: "Flex item 1",
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
@@ -23,7 +23,7 @@ var store = {
             },
             {
                 id: 1,
-                text: "Item 2",
+                text: "Flex item 2",
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
@@ -32,7 +32,7 @@ var store = {
             },
             {
                 id: 2,
-                text: "Item 3",
+                text: "Flex item 3",
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
@@ -41,7 +41,7 @@ var store = {
             },
             {
                 id: 3,
-                text: "Item 4",
+                text: "Flex item 4",
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
@@ -50,7 +50,7 @@ var store = {
             },
             {
                 id: 4,
-                text: "Item 5",
+                text: "Flex item 5",
                 order: 0,
                 flexShrink: 1,
                 flexGrow: 0,
@@ -66,7 +66,7 @@ var store = {
         var newId = this.state.items.length;
         this.state.items.push({
             id: newId,
-            text: "Item " + (newId + 1),
+            text: "Flex item " + (newId + 1),
             order: 0,
             flexShrink: 1,
             flexGrow: 0,
